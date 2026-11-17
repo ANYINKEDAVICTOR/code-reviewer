@@ -1,14 +1,14 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "code-reviewer",
-  "version": "1.0.0",
-  "description": "Code Reviewer by Anyinkeda Victor — read-only OWASP security auditor, domain rubric checker, and visual Markdown/Mermaid reporter.",
+  "version": "1.1.0",
+  "description": "Code Reviewer by Anyinkeda Victor - read-only OWASP security auditor, weighted project/course rubric grader, and visual Markdown/Mermaid reporter.",
   "author": {
     "name": "Anyinkeda Victor",
     "url": "https://github.com/ANYINKEDAVICTOR"
   },
   "homepage": "https://github.com/ANYINKEDAVICTOR/code-reviewer",
   "repository": "https://github.com/ANYINKEDAVICTOR/code-reviewer",
-  "keywords": ["review", "code-reviewer", "security", "audit", "rubric", "quality"],
+  "keywords": ["review", "code-reviewer", "security", "audit", "rubric", "quality", "coursework"],
   "license": "MIT"
 }

@@ -1,18 +1,20 @@
 ---
 name: security-audit
-description: Perform a thorough security, reliability, and domain-rubric audit on code or student/team projects. Use when reviewing code, auditing files, or grading project submissions.
+description: Perform an autonomous, read-only security, reliability, and 100-point domain rubric audit on codebases or course submissions with visual Markdown/Mermaid reports.
 ---
 
-# Security & Domain Audit Playbook
+# Autonomous Code & Security Audit Playbook
 
-Before scoring, read `references/rubric.md` and evaluate every target file against:
-1. **Secrets & Credentials:** Hardcoded API keys, tokens, DB URIs, weak defaults.
-2. **Injection & Input Validation:** SQL injection, command injection, path traversal, XSS.
-3. **Error Handling & Reliability:** Unhandled errors, resource leaks, overly broad `except Exception` catches.
-4. **Domain Rubric Criteria:** All requirements defined in `references/rubric.md`.
+Before scoring, read `references/rubric.md` completely and inspect every target file thoroughly.
+
+## Evaluation Workflow
+1. **Verify Facts First:** Read the actual file(s) completely before reporting any issue. Quote exact file paths, line numbers, and code snippets.
+2. **Audit Security & Logic:** Check secrets, injection vectors, input validation, edge cases, resource leaks, and exception specificity.
+3. **Score Against Rubric:** Calculate points strictly using `references/rubric.md` (Security 30, Correctness 30, Reliability 20, Structure 20). Note that any Critical security issue forces the verdict to **Revision Required** regardless of total score.
 
 ## Output Format & Consistency Rules
-- Present an **Executive Summary** table with exact counts by severity (`Critical`, `High`, `Medium`, `Low`).
-- **Consistency check:** Count every finding below and verify the Executive Summary numbers equal the exact severity totals before finishing.
-- For each finding, include **File & Line**, **Confidence**, **Risk**, **Vulnerable Code**, and **Fixed Code** (using specific exception classes, not bare `except Exception`).
-- Include a **Mermaid diagram** tracing untrusted input to sensitive sinks when data-flow risks exist.
+- **Executive Summary Table:** Exact severity counts (`Critical`, `High`, `Medium`, `Low`). Verify the counts equal the exact findings listed below before finishing.
+- **Rubric Scorecard Table:** Score breakdown per category + total `/100` + final Verdict.
+- **Threat-Flow Diagram:** Include a Mermaid diagram when untrusted inputs reach sensitive sinks (DB, shell, filesystem, network).
+- **Detailed Findings:** Include **Severity**, **Confidence**, **File & Line**, **Vulnerable Code**, and **Fixed Code** (always using specific exception classes rather than bare `except Exception`).
+- **Action Checklist:** Prioritized checklist of concrete fixes.
