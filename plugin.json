@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "domain-reviewer",
+  "version": "1.0.0",
+  "description": "Domain-focused code & project reviewer with structured rubrics, security checks, and visual Markdown/Mermaid reports.",
+  "author": {
+    "name": "Anyinkeda Victor"
+  },
+  "keywords": ["review", "audit", "rubric", "security", "quality", "course"],
+  "license": "MIT"
+}
